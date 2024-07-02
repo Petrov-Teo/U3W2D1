@@ -1,26 +1,26 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import MyNavBar from "./Components/MyNavBr";
-import Welcome from "./Components/Welcome";
-import Main from "./Components/Main";
-import Footer from "./Components/Footeer";
-import { render } from "@testing-library/react";
-import { Component } from "react";
+import MyNav from "./components/MyNav";
+import MyFooter from "./components/MyFooter";
+import Welcome from "./components/Welcome";
+// import AllTheBooks from './components/AllTheBooks'
+import { Container } from "react-bootstrap";
+import BookList from "./components/BookList";
 
-class App extends Component() {
-  state = {
-    books: "",
-  };
-  render() {
-    return (
-      <div className="App">
-        <MyNavBar />
+import fantasy from "./data/fantasy.json";
+
+function App() {
+  return (
+    <>
+      <MyNav />
+      <Container>
         <Welcome />
-        <Main />
-        <Footer />
-      </div>
-    );
-  }
+        {/* <AllTheBooks /> */}
+        <BookList books={fantasy} />
+      </Container>
+      <MyFooter />
+    </>
+  );
 }
 
 export default App;

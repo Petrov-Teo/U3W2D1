@@ -1,12 +1,9 @@
-import React from "react";
-class Welcome extends React.Component {
-  render() {
-    return (
-      <div className="mt-3">
-        <h1 className="fs-1 text-dark">Welcome</h1>
-      </div>
-    );
-  }
-}
+import { Alert } from 'react-bootstrap'
 
-export default Welcome;
+const Welcome = () => (
+  <Alert className="text-center">
+    <h1>Benvenuti in EpiBooks!</h1>
+  </Alert>
+)
+
+export default Welcome
